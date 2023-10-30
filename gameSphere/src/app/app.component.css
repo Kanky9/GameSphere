@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
+*{
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container{
+    height: 90px;
+    padding: 0;
+    margin: 0;
+}
+
+.menu__container{
+    height: 90px;
+    background: #30303089;
+    border-radius: 25px;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    z-index: 1;
+}
+
+.title__nav{
+    grid-column: 1/13;
+    border:5px solid #1086e8;
+    width:300px;
+    height: 80px;
+    border-radius:20px;
+    animation: border-flicker 2s linear infinite;
+}
+
+.title{
+    color:#FF00E6;
+    font-family: 'Raleway', sans-serif;
+    font-size:35px;
+    text-align: center;
+    margin-top: 6%;
+    letter-spacing:7px;
+    animation: text-flicker 3s linear infinite;
+}
+
+#offset {
+  animation: letter-flicker 2s linear infinite;
+}
+
+.menu__nav{
+    grid-column:end 1/13;
+    text-align: center;
+    padding-top: 6%;
+    padding-right: 15px;
+}
+
+.link{
+    color: #f3f3f3;
+    padding: 10px;
+    border-radius: 25px;
+    margin: 10px;
+    font-weight: 600;
+    animation: borderAnimation 2s infinite linear;
+}
+
+@keyframes borderAnimation { /*Esto es una propiedad, que nos hace la animacion, de los links */
+  0% {
+    border: 2px solid #1086e8;
+    box-shadow: 0 0 0 2px #1086e8;;
+  }
+  25%{
+    border: 2px solid #7a4ae3;
+    box-shadow: 0 0 0 2px #7a4ae3;
+  }
+  50% {
+    border: 2px solid #bf16f2;
+    box-shadow: 0 0 0 2px #bf16f2;
+  }
+  75%{
+    border: 2px solid #7a4ae3;
+    box-shadow: 0 0 0 2px #7a4ae3;
+  }
+  100% {
+    border: 2px solid #1086e8;
+    box-shadow: 0 0 0 2px #1086e8;
+  }
+}
+
+@keyframes text-flicker { /*Esto es una propiedad, anima el titulo*/
+  0% {
+    opacity:0.1;
+    text-shadow: 0px 0px 29px rgba(242, 22, 22, 1);
+  }
+  
+  2% {
+    opacity:1;
+    text-shadow: 0px 0px 29px rgba(242, 22, 22, 1);
+  }
+  8% {
+    opacity:0.1;
+    text-shadow: 0px 0px 29px rgba(242, 22, 22, 1);
+  }
+  9% {
+    opacity:1;
+    text-shadow: 0px 0px 29px rgba(242, 22, 22, 1);
+  }
+  12% {
+    opacity:0.1;
+    text-shadow: 0px 0px rgba(242, 22, 22, 1);
+  }
+  20% {
+    opacity:1;
+    text-shadow: 0px 0px 29px rgba(242, 22, 22, 1)
+  }
+  25% {
+    opacity:0.3;
+    text-shadow: 0px 0px 29px rgba(242, 22, 22, 1)
+  }
+  30% {
+    opacity:1;
+    text-shadow: 0px 0px 29px rgba(242, 22, 22, 1)
+  }
+  
+  70% {
+    opacity:0.7;
+    text-shadow: 0px 0px 29px rgba(242, 22, 22, 1)
+  }
+  
+  72% {
+    opacity:0.2;
+    text-shadow:0px 0px 29px rgba(242, 22, 22, 1)
+  }
+  
+  77% {
+    opacity:.9;
+    text-shadow: 0px 0px 29px rgba(242, 22, 22, 1)
+  }
+  100% {
+    opacity:.9;
+    text-shadow: 0px 0px 29px rgba(242, 22, 22, 1)
+  }
+}
+
+@keyframes border-flicker { /*Esto es una propiedad, anima el titulo*/
+  0% {
+    opacity:0.1;
+    -webkit-box-shadow: 0px 0px 78px 4px rgba(16,134,232,0.73);
+-moz-box-shadow: 0px 0px 78px 4px rgba(16,134,232,0.73);
+box-shadow: 0px 0px 78px 4px rgba(16,134,232,0.73);
+  }
+  2% {
+    opacity:1;
+    -webkit-box-shadow: 0px 0px 78px 4px rgba(16,134,232,0.73);
+-moz-box-shadow: 0px 0px 78px 4px rgba(16,134,232,0.73);
+box-shadow: 0px 0px 78px 4px rgba(16,134,232,0.73);
+  }
+  4% {
+    opacity:0.1;
+    -webkit-box-shadow: 0px 0px 78px 4px rgba(16,134,232,0.73);
+-moz-box-shadow: 0px 0px 78px 4px rgba(16,134,232,0.73);
+box-shadow: 0px 0px 78px 4px rgba(16,134,232,0.73);
+  }
+  
+  8% {
+    opacity:1;
+    -webkit-box-shadow: 0px 0px 78px 4px rgba(16,134,232,0.73);
+-moz-box-shadow: 0px 0px 78px 4px rgba(16,134,232,0.73);
+box-shadow: 0px 0px 78px 4px rgba(16,134,232,0.73);
+  }
+  70% {
+    opacity:0.7;
+    -webkit-box-shadow: 0px 0px 78px 4px rgba(16,134,232,0.73);
+-moz-box-shadow: 0px 0px 78px 4px rgba(16,134,232,0.73);
+box-shadow: 0px 0px 78px 4px rgba(16,134,232,0.73);
+  }
+  100% {
+    opacity:1;
+    -webkit-box-shadow: 0px 0px 78px 4px rgba(16,134,232,0.73);
+-moz-box-shadow: 0px 0px 78px 4px rgba(16,134,232,0.73);
+box-shadow: 0px 0px 78px 4px rgba(16,134,232,0.73);
+  }
+}
+
+@keyframes letter-flicker { /*Esto es una propiedad, anima las letras de titulo*/
+  0% {
+    opacity:0.1;
+    text-shadow: 0px 0px 29px rgba(242, 22, 22, 1);
+  }
+  2% {
+    opacity:0.1;
+    text-shadow: 0px 0px 29px rgba(242, 22, 22, 1);
+  }
+  4% {
+    opacity:1;
+    text-shadow: 0px 0px 29px rgba(242, 22, 22, 1);
+  }
+  19% {
+    opacity:1;
+    text-shadow: 0px 0px 29px rgba(242, 22, 22, 1);
+  }
+  21% {
+    opacity:0.1;
+    text-shadow: 0px 0px 29px rgba(242, 22, 22, 1);
+  }
+  23% {
+    opacity:1;
+    text-shadow: 0px 0px 29px rgba(242, 22, 22, 1);
+  }
+  
+  80% {
+    opacity:1;
+    text-shadow: 0px 0px 29px rgba(242, 22, 22, 1);
+  }
+  83% {
+    opacity:0.4;
+    text-shadow: 0px 0px 29px rgba(242, 22, 22, 1);
+  }
+  87% {
+    opacity:1;
+    text-shadow: 0px 0px 29px rgba(242, 22, 22, 1);
+  }
+}

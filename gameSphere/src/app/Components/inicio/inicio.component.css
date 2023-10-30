@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+
+*{
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    margin-top: 50px;
+    width: 100%;
+    min-height: 300px;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+
+.cont__imgLink{
+    width: 300px;
+    height: 300px;
+    padding: 20px;
+}
+
+.imgLink {
+    cursor: pointer;
+    height: 300px;
+    width: 300px;
+    border-radius: 30px;
+}
+
+/* Styles pacman */
+
+.container__pacman{
+    width: 100%;
+    min-height: 500px;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+
+.game-container {
+
+    width: 500px;
+    height: 200px;
+    position: relative;
+    overflow: hidden;
+}
+
+#pacman {
+    position: absolute;;
+    top: 80px;
+    left: -1px;
+    z-index: 1;
+}
+
+#pacman::before, #pacman::after{
+    position: absolute;
+    top: -15px;
+    display: block;
+    border-radius: 50%;
+    content: "";
+    height: 0px;
+    width: 0px;
+}
+
+#pacman::before{
+    animation: chunk-top .5s ease infinite;
+    border: 35px solid #FFCC00;
+    border-left-color: transparent;
+    border-bottom-color: transparent;
+}
+
+#pacman::after{
+    animation: chunk-bottom .5s ease infinite;
+    border: 35px solid #FFCC00;
+    border-right-color: transparent;
+    border-top-color: transparent;  
+}
+
+.ball {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: white;
+    position: absolute;
+    top: 90px;
+    left: 0;
+    animation: move-ball 4s infinite linear;
+}
+
+@keyframes move-ball {
+  0% {
+    transform: translateX(500px);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.ball:nth-child(2) {
+  animation-delay: 0.5s;
+}
+
+.ball:nth-child(3) {
+  animation-delay: 1s;
+}
+
+.ball:nth-child(4) {
+  animation-delay: 1.5s;
+}
+
+.ball:nth-child(5) {
+  animation-delay: 2s;
+}
+
+.ball:nth-child(6) {
+  animation-delay: 2.5s;
+}
+
+.ball:nth-child(7) {
+  animation-delay: 3s;
+}
+
+.ball:nth-child(8) {
+  animation-delay: 3.5s;
+}
+
+
+@keyframes chunk-top {
+    0%,
+    100% {
+        transform: rotate(-45deg);
+    }
+    50% {
+        transform: rotate(-80deg);
+    }
+}
+
+@keyframes chunk-bottom {
+    0%,
+    100% {
+        transform: rotate(-40deg);
+    }
+    50% {
+        transform: rotate(0deg);
+    }
+}

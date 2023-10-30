@@ -1,0 +1,30 @@
+<section class="container">
+
+    <div class="cont__div">
+
+        <nav class="cont__dados">
+
+            <app-dados class="dados" [valor]="valor1"></app-dados>
+
+            <app-dados class="dados" [valor]="valor2"></app-dados>
+
+            <app-dados class="dados" [valor]="valor3"></app-dados>
+
+        </nav>
+        
+        <nav class="cont__boton">
+
+            <button class="botonTirar" (click)="tirar()">Tirar</button>
+
+        </nav>
+
+        <nav class="cont__resultado">
+        
+            <p class="result__parrafo">Resultado: {{resultado}}</p>
+        
+        </nav>
+
+
+    </div>
+
+</section>

@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+
+*{
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container{     
+  margin-top: 50px;     
+  min-height: 900px;
+  height: 100%;
+}
+
+.title{                 /*Titulo*/
+  color: #fff;
+  text-align: center;
+  font-size: 28px;
+} 
+
+.opciones {
+  margin-top: 80px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.img__PPT{ 
+  margin-top: 10px;
+  width: 200px;
+  border-radius: 25px;
+}
+
+.boton {
+  background: transparent;
+  margin-right: 10px;
+  width: 220px;
+  border: 0 solid;
+  color: #fff;
+  font-weight: 700;
+}
+
+.img__PPT:hover{
+  background-color:#C68ADA;
+}
+
+.opciones{
+  background: transparent;
+}
+
+.cont__resultados{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.resultados{
+  grid-column: 2/4;
+  margin-top: 30px;
+  max-width: 500px;
+  width: 100%;
+  border: 2px solid #fff;
+}
+
+.resultados p{
+  text-align: center;
+  color: #fff;
+  font-size: 20px;
+}
+

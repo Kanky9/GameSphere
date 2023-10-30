@@ -1,0 +1,7 @@
+/* color de fondo */
+body{ 
+    background: linear-gradient(to top, #ec38bc, #7303c0, #03001e);
+    /*background: linear-gradient(to bottom, #f64f59, #c471ed, #12c2e9);*/
+    /*background: linear-gradient(to top, #859398, #283048); */
+
+}

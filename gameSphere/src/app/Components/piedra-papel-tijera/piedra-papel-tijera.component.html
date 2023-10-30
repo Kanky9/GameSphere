@@ -1,0 +1,17 @@
+<section class="container">
+    <h1 class="title"> Piedra, Papel y Tijera</h1>
+
+    <div class="opciones">
+        <button class="boton" (click)="jugar(opcion)" *ngFor="let opcion of opciones">{{opcion}}
+          <img class="img__PPT" [src]="obtenerImagen(opcion)"  alt="{{ opcion }}"> <!--Cuando le demos click a la imagen, nos va a mostrar si es piedra, papel o tijera -->
+        </button>
+    </div>
+
+    <div class="cont__resultados"> 
+        <div class= "resultados" *ngIf="opcionJugador && opcionComputadora"> 
+            <p>Elegiste: {{opcionJugador}}</p>
+            <p>Elección de la computadora: {{opcionComputadora}}</p>
+            <p>Resultado: {{resultado}}</p>
+        </div>
+    </div>
+</section>

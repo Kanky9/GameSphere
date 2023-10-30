@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: 'Roboto', sans-serif;
+}
+
+.container{
+  margin-top: 10px;
+  min-height: 580px;
+}
+
+.game-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.boton{
+  cursor: pointer;
+  border-radius: 25px;
+  padding: 7px;
+  font-size: 25px;
+  border: 2px solid ;
+  animation: borderAnimation 2s infinite linear;
+  background: #303030;
+  color: #f3f3f3;
+  font-weight: 600;
+}
+
+.cont__score{
+  min-width: 600px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+}
+
+.cont__score p{
+  margin-top: 10px;
+  font-size: 20px;
+  color: #f3f3f3;
+}
+
+.score {
+  grid-column: 1/5;
+  grid-row: 1/-1;
+  text-align: start;
+  
+}
+
+.highScore{
+  grid-column: 1/5;
+  grid-row: 1/-1;
+  text-align: end;
+}
+
+.cont__gameOver{
+  position: relative;
+  /* Asegúrate de que el contenedor tenga un tamaño definido */
+  width: 100%;
+  height: 100%;
+}
+
+.game-over{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-size: 50px;
+  font-weight: 700;
+}
+
+.canvas {
+  background-image: url(../../assets/img/FondoSnake.png); /*Imagen ajustada 500px (altura) 600px (ancho)*/
+  position: relative;
+  border: 2px solid #000;
+}
+
+.snake,
+.food {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+}
+
+.snake {
+  background-color: #6a461c;
+}
+
+.food {
+  background-color: #f00;
+  border-radius: 50%;
+}
+
+
+@keyframes borderAnimation {
+  0% {
+    border: 2px solid #38a516;
+    box-shadow: 0 0 0 2px #38a516;;
+  }
+  25%{
+    border: 2px solid #4dc944;
+    box-shadow: 0 0 0 2px #4dc944;
+  }
+  50% {
+    border: 2px solid #7cf123;
+    box-shadow: 0 0 0 2px #7cf123;
+  }
+  75%{
+    border: 2px solid #4dc944;
+    box-shadow: 0 0 0 2px #4dc944;
+  }
+  100% {
+    border: 2px solid #38a516;
+    box-shadow: 0 0 0 2px #38a516;
+  }
+}
+
