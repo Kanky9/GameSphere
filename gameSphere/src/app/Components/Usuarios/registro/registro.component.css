@@ -1,0 +1,31 @@
+/* vista-cambios.component.css */
+
+*{
+    text-decoration: none;
+}
+
+.container {
+    margin-top: 10px;
+    min-height: 81vh;
+    width: 99vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+.container::before
+{
+content: '';
+}
+
+
+
+
+
+
+
+
+
+

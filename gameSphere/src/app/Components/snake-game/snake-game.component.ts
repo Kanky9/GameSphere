@@ -20,6 +20,11 @@ interface Position {
   styleUrls: ['./snake-game.component.css']
 })
 export class SnakeGameComponent implements OnInit {
+
+  ngOnInit() {
+
+  }
+
   // Propiedades del componente
   canvasWidth: number = 600; // Ancho del lienzo del juego
   canvasHeight: number = 500; // Alto del lienzo del juego
@@ -32,9 +37,7 @@ export class SnakeGameComponent implements OnInit {
   gameOver: boolean = false; // Indica si el juego ha terminado
   gameInterval: any; // Intervalo de tiempo para el bucle principal del juego
 
-  ngOnInit() {
-    this.startGame(); // Método que se ejecuta al inicializar el componente
-  }
+ 
 
   startGame() {
     // Reinicia las propiedades del juego para empezar una nueva partida

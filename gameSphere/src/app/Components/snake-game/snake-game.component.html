@@ -7,8 +7,8 @@
         </nav>
 
         <div class="cont__score">
-            <p class="score">Score: {{ score }}</p> <!-- Llama a la función que muestra los puntos -->
-            <p class="highScore">High Score: {{ highScore }}</p> <!-- Llama a la función que muestra el mayor puntaje-->
+            <p class="score">Score: {{ score }}</p> <!--Llama a la función que muestra los puntos -->
+            <p class="highScore">High Score: {{ highScore }}</p> <!--Llama a la función que muestra el mayor puntaje-->
         </div>
         
         <div class="canvas" [style.width.px]="canvasWidth" [style.height.px]="canvasHeight"> <!--canvas hace referencia al lugar que esta ocupando en la pantalla, en este caso es el contenedor del juego-->
@@ -16,7 +16,7 @@
             <div class="snake" *ngFor="let part of snake" [style.left.px]="part.x * squareSize" 
                 [style.top.px]="part.y * squareSize"></div> <!--llama a las funciones correspondientes para posicionar la serpiente-->
 
-            <div class="food" [style.left.px]="food.x * squareSize" [style.top.px]="food.y * squareSize"></div> <!--igual que al snake pero para la comida-->
+            <div class="food" [style.left.px]="food.x * squareSize" [style.top.px]="food.y * squareSize"></div><!-- igual que al snake pero para la comida-->
 
             <nav class="cont__gameOver">
                 <p class="game-over" *ngIf="gameOver">Game Over</p> <!--llama a gameOver, el cual se muestra solo si perdés-->

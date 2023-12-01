@@ -49,11 +49,11 @@ export class PiedraPapelTijeraComponent {
   obtenerImagen(opcion: Opcion): string {
     switch (opcion) {
       case Opcion.PIEDRA:
-        return '../../assets/img/rock.png';
+        return '../../../assets/img/rock.png';
       case Opcion.PAPEL:
-        return '../../assets/img/paper.png';
+        return '../../../assets/img/paper.png';
       case Opcion.TIJERA:
-        return '../../assets/img/scissors.png';
+        return '../../../assets/img/scissors.png';
       default:
         return '';
     }

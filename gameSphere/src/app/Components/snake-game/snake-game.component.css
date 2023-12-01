@@ -1,16 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+
 
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   text-decoration: none;
-  font-family: 'Roboto', sans-serif;
 }
 
 .container{
   margin-top: 10px;
   min-height: 580px;
+  /*height: min(100% + 15px, 580px);*/
 }
 
 .game-container {
@@ -75,7 +75,7 @@
 }
 
 .canvas {
-  background-image: url(../../assets/img/FondoSnake.png); /*Imagen ajustada 500px (altura) 600px (ancho)*/
+  background-image: url(../../../assets/img/FondoSnake.png); /*Imagen ajustada 500px (altura) 600px (ancho)*/
   position: relative;
   border: 2px solid #000;
 }
@@ -119,4 +119,3 @@
     box-shadow: 0 0 0 2px #38a516;
   }
 }
-
