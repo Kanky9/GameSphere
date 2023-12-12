@@ -2,7 +2,7 @@
 
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
@@ -15,6 +15,7 @@ import { LoginComponent } from './Components/Usuarios/login/login.component';
 import { RegistroComponent } from './Components/Usuarios/registro/registro.component';
 import { ComentariosComponent } from './Components/comentarios/comentarios.component';
 import { RankingComponent } from './Components/ranking/ranking.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -27,12 +28,14 @@ import { RankingComponent } from './Components/ranking/ranking.component';
     LoginComponent,
     RegistroComponent,
     ComentariosComponent,
-    RankingComponent
+    RankingComponent,
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule, //Aca se importo la clase
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
