@@ -16,7 +16,7 @@ public class Persona {
     private String name;
     private String password; 
 
-    /* Constructor vacío */
+    /* Constructor vacio */
     public Persona() {
     }
 

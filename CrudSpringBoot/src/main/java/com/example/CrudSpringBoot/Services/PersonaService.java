@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 import com.example.CrudSpringBoot.Interface.IPersona;
 import com.example.CrudSpringBoot.InterfaceService.IpersonaService;
 import com.example.CrudSpringBoot.Models.Persona;
+import org.springframework.transaction.annotation.Transactional;
 
 @Service
 public class PersonaService implements IpersonaService {
@@ -26,18 +27,14 @@ public class PersonaService implements IpersonaService {
         return data.findById(id); 
     }
 
+    @Transactional //Para garantizar la atomicidad de estas operaciones
     @Override
     public int save(Persona p) {
-        int res = 0;
-        Persona persona = data.save(p);
-        
-        if(!persona.equals(null)){
-            res = 1;
-        }
-
-        return res;
+    Persona persona = data.save(p);
+    return (persona.getId() != 0) ? 1 : 0;
     }
 
+    @Transactional
     @Override
     public void delete(int id) {
         data.deleteById(id);
