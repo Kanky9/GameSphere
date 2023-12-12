@@ -1,5 +1,22 @@
-<section class="container">
+<section class="container" #gameContainer>
+
     <h1 class="title"> Piedra, Papel y Tijera</h1>
+
+    <div class="resultados" *ngIf="opcionJugador && opcionComputadora">
+        <nav class="nav__jugador">
+            <img class="img__resultado img--jugador" [src]="obtenerImagen(opcionJugador)" alt="">
+            <p>Elegiste: {{opcionJugador}}</p>
+        </nav>
+    
+        <nav class="nav__computadora">
+            <img class="img__resultado img--computadora" [src]="obtenerImagen(opcionComputadora)" alt="">
+            <p>Computadora: {{opcionComputadora}}</p>
+        </nav>
+    </div>
+    
+    <div class="cont__resultado" *ngIf="opcionJugador && opcionComputadora">
+        <p>Resultado: {{resultado}}</p>
+    </div>
 
     <div class="opciones">
         <button class="boton" (click)="jugar(opcion)" *ngFor="let opcion of opciones">{{opcion}}
@@ -7,11 +24,4 @@
         </button>
     </div>
 
-    <div class="cont__resultados"> 
-        <div class= "resultados" *ngIf="opcionJugador && opcionComputadora"> 
-            <p>Elegiste: {{opcionJugador}}</p>
-            <p>Elección de la computadora: {{opcionComputadora}}</p>
-            <p>Resultado: {{resultado}}</p>
-        </div>
-    </div>
 </section>

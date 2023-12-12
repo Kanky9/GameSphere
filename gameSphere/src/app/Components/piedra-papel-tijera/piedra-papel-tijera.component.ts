@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 
+// Enumeración que representa las opciones del juego
 enum Opcion {
   PIEDRA = 'Piedra',
   PAPEL = 'Papel',
@@ -11,27 +12,32 @@ enum Opcion {
   templateUrl: './piedra-papel-tijera.component.html',
   styleUrls: ['./piedra-papel-tijera.component.css']
 })
-
 export class PiedraPapelTijeraComponent {
+  // Array que contiene las opciones del juego
   opciones: Opcion[] = Object.values(Opcion);
-  opcionJugador!: Opcion; //Se puso el signo de exclamacion para que le de un valor indefinido o nulo 
+
+  // Variables para almacenar la opción elegida por el jugador y la computadora
+  opcionJugador!: Opcion;
   opcionComputadora!: Opcion;
+
+  // Variable para almacenar el resultado del juego
   resultado: string | undefined;
 
+  // Función que se ejecuta cuando el jugador elige una opción
   jugar(opcion: Opcion): void {
     this.opcionJugador = opcion;
-    this.opcionComputadora = this.generarOpcionComputadora();
-    this.calcularResultado();
+    this.opcionComputadora = this.generarOpcionComputadora(); // Se elige una opción aleatoria para la computadora
+    this.calcularResultado(); // Se determina el resultado del juego
   }
 
-  //Esta funcion es para darle de forma automatica, el valor a la computadora
+  // Genera una opción aleatoria para la computadora
   generarOpcionComputadora(): Opcion { 
     const opciones = Object.values(Opcion);
     const indice = Math.floor(Math.random() * opciones.length);
     return opciones[indice];
   }
 
-  //Esta funcion sirve para evaluar el las opciones del jugador y de la computadora
+  // Calcula el resultado del juego comparando las opciones elegidas por el jugador y la computadora
   calcularResultado(): void {  
     if (this.opcionJugador === this.opcionComputadora) {
       this.resultado = 'EMPATE';
@@ -45,7 +51,8 @@ export class PiedraPapelTijeraComponent {
       this.resultado = 'PERDISTE :,(';
     }
   }
-  //Esta funcion es para que retorne la imagen que le agreguemos, piedra, papel, tijera. Segun lo que elija el usuario
+
+  // Retorna la URL de la imagen correspondiente a la opción elegida por el jugador
   obtenerImagen(opcion: Opcion): string {
     switch (opcion) {
       case Opcion.PIEDRA:

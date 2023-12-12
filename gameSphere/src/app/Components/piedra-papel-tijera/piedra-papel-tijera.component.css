@@ -1,21 +1,24 @@
 *{
-    text-decoration: none;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.container{     
-  margin-top: 50px;     
-  min-height: 900px;
+.container{         
+  min-height: 100vh;
   height: 100%;
+  margin-top: 80px;
 }
 
-.title{                 /*Titulo*/
+.title{ 
   color: #fff;
   text-align: center;
   font-size: 28px;
 } 
 
-.opciones {
-  margin-top: 80px;
+.opciones, .resultados {
+  margin-top: 50px;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -44,22 +47,26 @@
   background: transparent;
 }
 
-.cont__resultados{
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+.nav__jugador, .nav__computadora{
+  align-items: center;
+  text-align: center;
+  padding: 10px;
 }
 
-.resultados{
-  grid-column: 2/4;
-  margin-top: 30px;
-  max-width: 500px;
-  width: 100%;
-  border: 2px solid #fff;
+.img__resultado{
+  width: 200px;
+  border-radius: 25px;
 }
 
-.resultados p{
+.resultados p, .cont__resultado p{
   text-align: center;
   color: #fff;
   font-size: 20px;
 }
 
+.cont__resultado{
+  display: flex;
+  margin: 20px;
+  justify-content: center;
+  text-align: center;
+}
