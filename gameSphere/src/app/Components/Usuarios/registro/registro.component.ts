@@ -1,6 +1,7 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { ServiceService } from 'src/app/Services/service.service';
+import { Persona } from 'src/app/Models/Persona';
 
 @Component({
   selector: 'app-registro',
@@ -12,8 +13,13 @@ export class RegistroComponent {
 
   constructor(private http: HttpClient, private serviceService: ServiceService) {}
 
-  username: string = '';
-  password: string = '';
+  personas: Persona[] = [
+    //new Persona('Teco', '123645')
+  ];
+
+  userInput: string = '';
+  passInput: string = '';
+  
   isPasswordVisible = false;
 
   togglePassword() {
@@ -27,16 +33,13 @@ export class RegistroComponent {
     }
   }
 
-  registrarUsuario(event: Event) {
-    event.preventDefault(); 
+  registrarUsuario() {
 
-    const userData = {
-      name: this.username, //Funcion que esta en el boton de ingresar
-      password: this.password
-    };
+    let persona1 = new Persona(this.userInput, this.passInput);
+    this.personas.push(persona1); 
 
     // Llamada al método de registro del servicio
-    this.serviceService.register(userData).subscribe(
+    this.serviceService.register(persona1).subscribe(
       (response) => {
         console.log('Registro exitoso:', response);
         // Realizar acciones adicionales después de un registro exitoso si es necesario

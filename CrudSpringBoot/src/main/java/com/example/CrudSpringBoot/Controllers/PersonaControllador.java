@@ -18,7 +18,7 @@ import com.example.CrudSpringBoot.Models.Persona;
 
 @Controller
 @RequestMapping("/log")
-@CrossOrigin (origins = "http://localhost:4200")
+@CrossOrigin(origins = "http://localhost:4200")
 
 public class PersonaControllador {
 

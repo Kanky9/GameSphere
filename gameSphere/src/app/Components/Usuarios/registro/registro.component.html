@@ -1,24 +1,24 @@
 <section class="container">
   <div class="sign_in">
-      <div class="content">
-        <h2 title="Crea tu usuario para dejar tu marca en los juegos que te destaques!">Crea Tu Usuario</h2>
-          <div class="form">
-              <div class="inputbox">
-                <form (submit)="registrarUsuario($event)" >
-                  <input type="text" id="username" placeholder="Nombre de usuario" required>
-                  <input #passwordInput type="password" id="password" placeholder="Contraseña" required>
-                  <button type="submit">Registrarse</button>
-                  <button (click)="togglePassword()" id="togglePassword">👁️</button>
-                </form>
-              </div>
-              <div class="links">
-                <a href="#">¿Olvidaste tu contraseña?</a>
-              </div>
-              
-          </div>
-          
-      </div>
-      
-  </div>
+    <div class="content">
 
+      <h2 title="Crea tu usuario para dejar tu marca en los juegos que te destaques!">Crea Tu Usuario</h2>
+    
+      <div class="form">
+        <div class="inputbox">
+          <form >
+            <input [(ngModel)]="userInput" [ngModelOptions]="{standalone: true}" type="text" id="username" placeholder="Nombre de usuario" required>
+            <input [(ngModel)]="passInput" [ngModelOptions]="{standalone: true}" #passwordInput type="password" id="password" placeholder="Contraseña" required>
+            <button (click)="togglePassword()" id="togglePassword">👁️</button>
+            <button (click)="registrarUsuario()" type="submit">Registrarse</button>
+          </form>
+        </div>
+    
+        <div class="links">
+          <a href="#">¿Olvidaste tu contraseña?</a>
+        </div>
+    
+      </div>
+    </div>
+  </div>
 </section>
