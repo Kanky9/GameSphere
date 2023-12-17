@@ -13,7 +13,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 @Service
 public class PersonaService implements IpersonaService {
-    
+
     @Autowired
     private IPersona data; 
 

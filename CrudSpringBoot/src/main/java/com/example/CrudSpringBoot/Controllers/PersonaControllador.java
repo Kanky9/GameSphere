@@ -11,37 +11,44 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.example.CrudSpringBoot.InterfaceService.IpersonaService;
 import com.example.CrudSpringBoot.Models.Persona;
+import com.example.CrudSpringBoot.Services.PersonaService;
 
 @Controller
-@RequestMapping("/log")
+@RequestMapping("/api")
 @CrossOrigin(origins = "http://localhost:4200")
 
 public class PersonaControllador {
 
+    /* El error esta en los return de los metodos */
+    /* Asi como estan solo guarda la contraseña de los usuarios */
+    /* Los return se tienen que conectar con los metodos del servicio */
+
     @Autowired
     private IpersonaService service;
+    private PersonaService personaService; 
 
-    @GetMapping("/listar")
+   @GetMapping("/listar")
     public String listar(Model model) {
         List<Persona> personas = service.listar();
         model.addAttribute("personas", personas);
-        return "index";
+        return listar(model);
     }
     
     @GetMapping("/new")
     public String agregar(Model model) {
         model.addAttribute("persona", new Persona());
-        return "form";
+        return agregar(model); 
     }
     
     @PostMapping("/save")
-    public String save(@Validated Persona p, Model model) {
+    public int save(@Validated @RequestBody Persona p, Model model) {
         service.save(p);
-        return "redirect:/listar";
+        return personaService.save(p); 
     }
 
     @GetMapping("/editar/{id}")

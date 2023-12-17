@@ -1,4 +1,4 @@
-function eliminar(id) {
+/*function eliminar(id) {
     swal({
         title: "Esta seguro de eliminar el usuario?",
         text: "",
@@ -25,4 +25,4 @@ function eliminar(id) {
                 swal("Su usuario no se eliminó");
             }    
         });
-}
+}*/

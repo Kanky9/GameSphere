@@ -12,7 +12,7 @@ public class CorsConfig {
         return new WebMvcConfigurer() {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
-                registry.addMapping("/log/**") // Ruta de la API
+                registry.addMapping("/api/**") // Ruta de la API
                     .allowedOrigins("http://localhost:4200") // Reemplaza con la URL de tu aplicación Angular
                     .allowedMethods("GET", "POST", "PUT", "DELETE");
             }
