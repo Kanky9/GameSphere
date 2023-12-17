@@ -9,12 +9,12 @@ import { Persona } from '../Models/Persona';
 })
 export class ServiceService {
 
-  apiUrl: string = 'http://localhost:8080/log';
+  apiUrl: string = 'http://localhost:8080';
 
   constructor(private http: HttpClient) { }
 
   register(persona: Persona) {
-    return this.http.post(`${this.apiUrl}/save`, persona).pipe(
+    return this.http.post(`${this.apiUrl}/api/save`, persona).pipe(
       catchError(error => {
         console.error('Error during registration:', error);
         return throwError(error);
